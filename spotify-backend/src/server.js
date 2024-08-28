@@ -1,10 +1,10 @@
 import express from "express"
 import cors from 'cors'
-import connectCloudinary from "./src/config/cloudinary.js";
+import connectCloudinary from "./config/cloudinary.js";
 import 'dotenv/config'
-import connectDB from "./src/config/mongodb.js";
-import songRouter from "./src/routes/songRoute.js";
-import albumRouter from "./src/routes/albumRoute.js";
+import connectDB from "./config/mongodb.js";
+import songRouter from "./routes/songRoute.js";
+import albumRouter from "./routes/albumRoute.js";
 
 // app config
 const app = express()
