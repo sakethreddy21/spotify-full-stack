@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+
 import dotenv from "dotenv";
 dotenv.config();
 import connectCloudinary from "./config/cloudinary.js";
@@ -9,7 +10,7 @@ import songRouter from "./routes/songRoute.js";
 import albumRouter from "./routes/albumRoute.js";
 
 // app config
-
+const app = express();
 const port = process.env.PORT || 4000
 connectCloudinary()
 connectDB()
