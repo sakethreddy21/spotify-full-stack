@@ -3,11 +3,11 @@ import cors from "cors";
 
 import dotenv from "dotenv";
 dotenv.config();
-import connectCloudinary from "./config/cloudinary.js";
+import connectCloudinary from "./config/cloudinary";
 
-import connectDB from "./config/mongodb.js";
-import songRouter from "./routes/songRoute.js";
-import albumRouter from "./routes/albumRoute.js";
+import connectDB from "./config/mongodb";
+import songRouter from "./routes/songRoute";
+import albumRouter from "./routes/albumRoute";
 
 // app config
 const app = express();
@@ -23,7 +23,8 @@ app.use(cors())
 app.use("/api/song", songRouter )
 app.use("/api/album", albumRouter )
 
-app.get("/", (req, res) => res.json("API Working"))
+app.get("/", (req:any, res:any) => res.json("API Working"))
 
 app.listen(4000, () => console.log(`Server started on ${port}`))
 
+module.exports = app;

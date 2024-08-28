@@ -1,6 +1,6 @@
 import express from 'express';
-import { addAlbum, listAlbum, removeAlbum } from '../controllers/albumController.js';
-import upload from '../middleware/multer.js';
+import { addAlbum, listAlbum, removeAlbum } from '../controllers/albumController';
+import upload from '../middleware/multer';
 
 const albumRouter = express.Router()
 

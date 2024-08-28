@@ -1,7 +1,7 @@
 import { v2 as cloudinary } from 'cloudinary'
-import songModel from '../models/songModel.js';
+import songModel from '../models/songModel';
 
-const addSong = async (req, res) => {
+const addSong = async (req:any, res:any) => {
 
     try {
         const name = req.body.name;
@@ -22,7 +22,7 @@ const addSong = async (req, res) => {
             duration
         };
 
-        const song = songModel(songData);
+        const song = new songModel(songData);
         await song.save();
 
         res.json({ success: true, message: "Song Added" });
@@ -35,7 +35,7 @@ const addSong = async (req, res) => {
 
 }
 
-const listSong = async (req, res) => {
+const listSong = async (req:any, res:any) => {
 
     try {
 
@@ -50,7 +50,7 @@ const listSong = async (req, res) => {
 
 }
 
-const removeSong = async (req, res) => {
+const removeSong = async (req:any, res:any) => {
 
     try {
 

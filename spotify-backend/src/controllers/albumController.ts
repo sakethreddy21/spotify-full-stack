@@ -1,7 +1,7 @@
 import { v2 as cloudinary } from 'cloudinary'
-import albumModel from '../models/albumModel.js';
+import albumModel from '../models/albumModel';
 
-const addAlbum = async (req, res) => {
+const addAlbum = async (req:any, res:any) => {
 
     try {
         const name = req.body.name;
@@ -17,7 +17,7 @@ const addAlbum = async (req, res) => {
             image: imageUpload.secure_url,
         };
 
-        const album = albumModel(albumData);
+        const album = new albumModel(albumData);
         await album.save();
 
         res.json({ success: true, message: "Album Added" });
@@ -31,7 +31,7 @@ const addAlbum = async (req, res) => {
 
 }
 
-const listAlbum = async (req, res) => {
+const listAlbum = async (req:any, res:any) => {
 
     try {
 
@@ -46,7 +46,7 @@ const listAlbum = async (req, res) => {
 
 }
 
-const removeAlbum = async (req, res) => {
+const removeAlbum = async (req:any, res:any) => {
 
     try {
 
