@@ -1,7 +1,6 @@
-const express = require("express");
-const app = express();
-const dotenv = require('dotenv');
-const cors = require('cors');
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
 dotenv.config();
 import connectCloudinary from "./config/cloudinary.js";
 
@@ -27,4 +26,3 @@ app.get("/", (req, res) => res.json("API Working"))
 
 app.listen(port, () => console.log(`Server started on ${port}`))
 
-module.exports = app;
