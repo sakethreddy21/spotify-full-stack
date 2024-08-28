@@ -25,5 +25,5 @@ app.use("/api/album", albumRouter )
 
 app.get("/", (req, res) => res.json("API Working"))
 
-app.listen(port, () => console.log(`Server started on ${port}`))
+app.listen(4000, () => console.log(`Server started on ${port}`))
 
